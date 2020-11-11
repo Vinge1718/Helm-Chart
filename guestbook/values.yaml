@@ -77,3 +77,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+redis:
+  # Override the redis.fullname template
+  fullnameOverride: redis
+  # Enable unauthenticated access to Redis
+  usePassword: false
+  # Disable AOF persistence
+  configmap: |-
+    appendonly no
